@@ -16,13 +16,13 @@ public class Demo2Application {
   private String name = "Igawa ";
   private String age = "38";
 
-  private Map<String, String> student;
+  private Map<String, String> students;
 
   public Demo2Application() {
-    student = new HashMap<>();
-    student.put("kanta", "11");
-    student.put("mei", "4");
-    student.put("satsuki", "11");
+    students = new HashMap<>();
+    students.put("kanta", "11");
+    students.put("mei", "4");
+    students.put("satsuki", "11");
   }
 
   public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class Demo2Application {
 
   @GetMapping("/studentNameList")
   public String getStudent(@RequestParam String studentNameList) {
-    return student.get(studentNameList);
+    return students.get(studentNameList);
   }
 
 
